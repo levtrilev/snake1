@@ -12,7 +12,7 @@ namespace snake1
         public int y;
         public char sym;
 
-        //public point() { }
+        public point() { }
 
         public point(int _x, int _y, char _sym)
         {

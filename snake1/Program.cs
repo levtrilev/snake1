@@ -31,6 +31,11 @@ namespace snake1
             pointList.Add(p1);
             pointList.Add(p2);
 
+            hLine hl1 = new hLine(2, 22, 10, '+');
+            hl1.Draw();
+            vLine vl1 = new vLine(2, 22, 10, '+');
+            vl1.Draw();
+
             Console.ReadLine();
         }
 
