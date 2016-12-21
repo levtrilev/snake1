@@ -21,8 +21,9 @@ namespace snake1
             vLine vRightline = new vLine(0, 23, 79, '+');
             vRightline.Draw();
 
-            point p1 = new snake1.point(3, 4, '#');
-            p1.Draw();
+            point p1 = new snake1.point(13, 4, '#');
+            Snake snake = new snake1.Snake(p1, 10, Direction.LEFT);
+            snake.Draw();
 
             Console.ReadLine();
         }
