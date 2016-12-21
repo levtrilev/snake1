@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace snake1
 {
-    class hLine
+    class hLine : Line
     {
-        List<point> pList;
-        public hLine(int xLeft, int xRight, int y, char sym)
+         public hLine(int xLeft, int xRight, int y, char sym)
         {
             pList = new List<point>();
             for(int x = xLeft; x <= xRight; x++)
@@ -19,14 +18,5 @@ namespace snake1
             }
 
         }
-
-        public void Draw()
-        {
-            foreach (point p in pList)
-            {
-                p.Draw();
-            }
-        }
-
     }
 }
