@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace snake1
 {
@@ -21,9 +22,20 @@ namespace snake1
             vLine vRightline = new vLine(0, 23, 79, '+');
             vRightline.Draw();
 
-            point p1 = new snake1.point(13, 4, '#');
-            Snake snake = new snake1.Snake(p1, 10, Direction.LEFT);
+            Point p1 = new snake1.Point(3, 4, '#');
+            Snake snake = new snake1.Snake(p1, 5, Direction.RIGHT);
             snake.Draw();
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
 
             Console.ReadLine();
         }

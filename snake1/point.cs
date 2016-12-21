@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace snake1
 {
-    class point
+    class Point
     {
         public int x;
         public int y;
         public char sym;
 
-        public point() { }
+        public Point() { }
 
-        public point(int _x, int _y, char _sym)
+        public Point(int _x, int _y, char _sym)
         {
             x = _x;
             y = _y;
             sym = _sym;
         }
-        public point(point p)
+        public Point(Point p)
         {
             x = p.x;
             y = p.y;
@@ -41,6 +41,13 @@ namespace snake1
                 else if (direction == Direction.UP) { y = y - offset; }
             
         }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
         public override string ToString()
         {
             return x + " , " + y + " , " + sym;

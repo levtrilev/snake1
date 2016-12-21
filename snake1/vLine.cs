@@ -11,10 +11,10 @@ namespace snake1
         
         public vLine(int yТор, int yBottom, int x, char sym)
         {
-            pList = new List<point>();
+            pList = new List<Point>();
             for (int y = yТор; y <= yBottom; y++)
             {
-                point p = new point(x, y, sym);
+                Point p = new Point(x, y, sym);
                 pList.Add(p);
             }
 
