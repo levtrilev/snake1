@@ -23,7 +23,7 @@ namespace snake1
             vRightline.Draw();
 
             Point p1 = new snake1.Point(3, 4, '#');
-            Snake snake = new snake1.Snake(p1, 5, Direction.RIGHT);
+            Snake snake = new snake1.Snake(p1, 15, Direction.RIGHT);
             snake.Draw();
 
             while(true)
@@ -31,25 +31,13 @@ namespace snake1
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
-                    if(key.Key == ConsoleKey.LeftArrow) { Snake.direction = Direction.LEFT; }
-                    else if (key.Key == ConsoleKey.RightArrow) { Snake.direction = Direction.RIGHT; }
-                    else if (key.Key == ConsoleKey.UpArrow) { Snake.direction = Direction.UP; }
-                    else if (key.Key == ConsoleKey.DownArrow) { Snake.direction = Direction.DOWN; }
-                    Snake.
+                    snake.HandleKey(key.Key);                    
                 }
+                Thread.Sleep(100);
+                snake.Move();
+
             }
 
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
 
             Console.ReadLine();
         }
