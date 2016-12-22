@@ -40,6 +40,20 @@ namespace snake1
             return NextPoint;
         }
 
+        internal bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsHit(food))
+            {
+                food.sym = head.sym;
+                food.Draw();
+                pList.Add(food);
+                return true;
+            }
+            else
+                return false;
+        }
+
         internal void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow) { direction = Direction.LEFT; }
